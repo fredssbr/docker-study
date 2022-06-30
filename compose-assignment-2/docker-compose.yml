@@ -14,11 +14,13 @@ services:
       # volume (which is what we're creating here) will be initialized with the
       # existing content of the image at the same location
       - drupal-sites:/var/www/html/sites
-      - drupal-data:/var/lib/postgresql/data
   postgres:
     image:  postgres:14.3
     environment:
       POSTGRES_PASSWORD: password
+    volumes:
+      - drupal-data:/var/lib/postgresql/data
+
   # assignment bonus - using MariaDB    
   mariadb:
     image: mariadb
