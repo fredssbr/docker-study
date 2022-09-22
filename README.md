@@ -35,7 +35,7 @@ Para testar o proxy:
   * Password: example
   * Database: postgres
 
-Pode-se também configurar mais opções de segurança no proxy, permitindo apenas conexões : 
+Pode-se também configurar mais opções de segurança no proxy, permitindo apenas conexões de determinados IPs : 
 
 ```
 allow <ip_address>;
